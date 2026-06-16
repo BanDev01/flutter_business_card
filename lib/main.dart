@@ -223,12 +223,24 @@ class BusinessCardScreen extends StatelessWidget {
 
                     // Expérience
                     const SizedBox(height: 12),
-                    const Text(
-                      "7+ ans d'expérience · Fondateur de BE Technology",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 11,
-                        color: Colors.black38,
+                    GestureDetector(
+                      onTap: () => _launch("https://be-technology.net"),
+                      child: RichText(
+                        textAlign: TextAlign.center,
+                        text: const TextSpan(
+                          style: TextStyle(fontSize: 11, color: Colors.black38),
+                          children: [
+                            TextSpan(text: "7+ ans d'expérience · Fondateur de "),
+                            TextSpan(
+                              text: "BE Technology",
+                              style: TextStyle(
+                                color: Color(0xFF6A11CB),
+                                fontWeight: FontWeight.w600,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
